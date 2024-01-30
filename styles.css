@@ -19,7 +19,7 @@ button {
     cursor: pointer;
     background-color: #003048; /* Slightly present dark blue background color */
     transition: transform 1s ease, background-color 1s ease; /* Add transition for 'transform' and 'background-color' properties */
-    animation: glow 3s infinite alternate, pulse 7s infinite; /* Apply both glow and pulse animations */
+    animation: glow 6s infinite alternate, pulse 7s infinite; /* Apply both glow and pulse animations */
 }
 
 button:active {
