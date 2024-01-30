@@ -16,16 +16,33 @@ button {
     border: none;
     border-radius: 50%; /* Make the button circular */
     cursor: pointer;
-    background-color: #002131; /* Slightly present dark blue background color */
-    transition: transform 3s ease, background-color 5s ease; /* Add transition for 'transform' property */
-}
-
-button:hover {
-    background-color: #008fb3; /* Darker blue for button hover effect */
-    transform: scale(1.1); /* Increase size by 10% on hover */
-    transition: transform 0.6s ease, background-color 3s ease; /* Faster transition for 'transform' and 'background-color' during hover */
+    background-color: #003048; /* Slightly present dark blue background color */
+    transition: transform 1s ease, background-color 1s ease; /* Add transition for 'transform' and 'background-color' properties */
+    animation: glow 3s infinite alternate, pulse 7s infinite; /* Apply both glow and pulse animations */
 }
 
 button:active {
     transform: scale(0.7); /* Decrease size by 10% on click */
+}
+
+button.music-playing {
+    background-color: #0057b3; /* Darker blue background color when music is playing */
+}
+
+@keyframes glow {
+    to {
+        box-shadow: 0 0 10px 5px #0057b3; /* Glowing effect color */
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
