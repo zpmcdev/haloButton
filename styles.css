@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #001f3f; /* Dark blue background color */
+}
+
+button {
+    font-size: 16px;
+    padding: 10px 20px;
+    color: #fff; /* White text color for better contrast */
+    background-color: #0074cc79; /* Blue button color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue for button hover effect */
+}
