@@ -6,6 +6,7 @@ body {
     margin: 0;
     background: url('wallpaper.png') no-repeat center center fixed;
     background-size: cover;
+    animation: moveBackground 120s linear infinite;
 }
 
 button {
@@ -31,7 +32,7 @@ button.music-playing {
 
 @keyframes glow {
     to {
-        box-shadow: 0 0 10px 5px #0057b3; /* Glowing effect color */
+        box-shadow: 0 0 50px 20px #0057b3; /* Glowing effect color */
     }
 }
 
@@ -44,5 +45,17 @@ button.music-playing {
     }
     100% {
         transform: scale(1);
+    }
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
     }
 }
