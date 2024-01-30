@@ -4,7 +4,8 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #001224; /* Dark blue background color */
+    background: url('wallpaper.png') no-repeat center center fixed;
+    background-size: cover;
 }
 
 button {
@@ -15,14 +16,14 @@ button {
     border: none;
     border-radius: 50%; /* Make the button circular */
     cursor: pointer;
-    background-color: #003048; /* Slightly present dark blue background color */
-    transition: transform 1s ease, background-color 2s ease; /* Add transition for 'transform' property */
+    background-color: #002131; /* Slightly present dark blue background color */
+    transition: transform 3s ease, background-color 5s ease; /* Add transition for 'transform' property */
 }
 
 button:hover {
     background-color: #008fb3; /* Darker blue for button hover effect */
     transform: scale(1.1); /* Increase size by 10% on hover */
-    transition: transform 0.2s ease, background-color 0.5s ease; /* Faster transition for 'transform' and 'background-color' during hover */
+    transition: transform 0.6s ease, background-color 3s ease; /* Faster transition for 'transform' and 'background-color' during hover */
 }
 
 button:active {
