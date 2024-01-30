@@ -5,10 +5,8 @@ document.addEventListener('DOMContentLoaded', function () {
     playButton.addEventListener('click', function () {
         if (audioPlayer.paused) {
             audioPlayer.play();
-            playButton.textContent = 'Pause Song';
         } else {
             audioPlayer.pause();
-            playButton.textContent = 'Play Song';
         }
     });
 });

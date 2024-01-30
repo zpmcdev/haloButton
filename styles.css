@@ -4,19 +4,27 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #001f3f; /* Dark blue background color */
+    background-color: #001224; /* Dark blue background color */
 }
 
 button {
-    font-size: 16px;
-    padding: 10px 20px;
-    color: #fff; /* White text color for better contrast */
-    background-color: #0074cc79; /* Blue button color */
+    width: 250px;
+    height: 250px;
+    background: url('buttonIMG.jpg') no-repeat center center;
+    background-size: contain;
     border: none;
-    border-radius: 5px;
+    border-radius: 50%; /* Make the button circular */
     cursor: pointer;
+    background-color: #003048; /* Slightly present dark blue background color */
+    transition: transform 1s ease, background-color 2s ease; /* Add transition for 'transform' property */
 }
 
 button:hover {
-    background-color: #0056b3; /* Darker blue for button hover effect */
+    background-color: #008fb3; /* Darker blue for button hover effect */
+    transform: scale(1.1); /* Increase size by 10% on hover */
+    transition: transform 0.2s ease, background-color 0.5s ease; /* Faster transition for 'transform' and 'background-color' during hover */
+}
+
+button:active {
+    transform: scale(0.7); /* Decrease size by 10% on click */
 }
