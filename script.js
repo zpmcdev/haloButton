@@ -51,11 +51,44 @@ document.addEventListener("DOMContentLoaded", function () {
     return shuffledArray;
   }
 
+  var previousImageIndex = -1; // Initialize to an invalid index
+
+  function changeBackgroundImage() {
+    const backgroundImages = [
+      "chief3.jpg",
+      "chiefDoor.jpg",
+      "chiefStand.jpg",
+      "helmetGround.jpg",
+      "wallpaper.png",
+    ];
+
+    // Pick a random background image different from the previous one
+    let randomIndex;
+    do {
+      randomIndex = Math.floor(Math.random() * backgroundImages.length);
+    } while (randomIndex === previousImageIndex);
+
+    // Update the previousImageIndex
+    previousImageIndex = randomIndex;
+
+    // Apply the new background image with a fade transition
+    document.body.style.transition = "background-image 1s ease-in-out";
+    document.body.style.backgroundImage = `url('${backgroundImages[randomIndex]}')`;
+
+    // Remove the transition property after the transition is complete
+    setTimeout(() => {
+      document.body.style.transition = "";
+    }, 1000);
+  }
+
   function playNextSong() {
     if (currentSongIndex < shuffledMusicList.length) {
       audioPlayer.src = shuffledMusicList[currentSongIndex];
       audioPlayer.play();
       currentSongIndex++;
+
+      // Change the background image when a new song starts
+      changeBackgroundImage();
     } else {
       if (!allSongsPlayed) {
         // Play the original playlist once
