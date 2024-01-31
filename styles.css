@@ -10,24 +10,6 @@ body {
     transition: background-image 1s ease-in-out;
 }
 
-@keyframes moveBackground {
-    0%  {
-        background-image: url('./src/imgs/chief3.jpg');
-    }
-    25% {
-        background-image: url('./src/imgs/chiefDoor.jpg');
-    }
-    50% {
-        background-image: url('./src/imgs/chiefStand.jpg');
-    }
-    75% {
-        background-image: url('./src/imgs/helmetGround.jpg');
-    }
-    100%{
-        background-image: url('./src/imgs/halo.mp3');
-    }
-}
-
 .container {
     display: flex;
     flex-direction: column;
