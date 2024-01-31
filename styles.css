@@ -9,6 +9,12 @@ body {
     animation: moveBackground 120s linear infinite;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 button {
     width: 250px;
     height: 250px;
@@ -58,4 +64,9 @@ button.music-playing {
     100% {
         background-position: 0% 0%;
     }
+}
+
+/* Center the volume slider under the button */
+input[type="range"] {
+    margin-top: 50px; /* Adjust the margin as needed */
 }
