@@ -5,13 +5,13 @@ document.addEventListener("DOMContentLoaded", function () {
   var previousButton = document.getElementById("previousButton");
   var nextButton = document.getElementById("nextButton");
   var musicList = [
-    "Epilogue.mp3",
-    "ghostsOfReach.mp3",
-    "finishTheFight.mp3",
-    "halo.mp3",
-    "neverForget.mp3",
-    "rememberance.mp3",
-    "peril.mp3",
+    "./src/music/Epilogue.mp3",
+    "./src/music/ghostsOfReach.mp3",
+    "./src/music/finishTheFight.mp3",
+    "./src/music/halo.mp3",
+    "./src/music/neverForget.mp3",
+    "./src/music/rememberance.mp3",
+    "./src/music/peril.mp3",
   ];
   var shuffledMusicList = shuffleArray(musicList); // Shuffled playlist
   var currentSongIndex = 0;
@@ -31,10 +31,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // Ensure 'ghostsOfReach.mp3' and 'rememberance.mp3' are not within 2 plays of each other
     for (let i = 0; i < shuffledArray.length - 1; i++) {
       if (
-        (shuffledArray[i] === "ghostsOfReach.mp3" &&
-          shuffledArray[i + 1] === "rememberance.mp3") ||
-        (shuffledArray[i] === "rememberance.mp3" &&
-          shuffledArray[i + 1] === "ghostsOfReach.mp3")
+        (shuffledArray[i] === "./src/music/ghostsOfReach.mp3" &&
+          shuffledArray[i + 1] === "./src/music/rememberance.mp3") ||
+        (shuffledArray[i] === "./src/music/rememberance.mp3" &&
+          shuffledArray[i + 1] === "./src/music/ghostsOfReach.mp3")
       ) {
         // Swap the next song with another randomly selected song
         const nextIndex = i + 1;
@@ -55,11 +55,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function changeBackgroundImage() {
     const backgroundImages = [
-      "chief3.jpg",
-      "chiefDoor.jpg",
-      "chiefStand.jpg",
-      "helmetGround.jpg",
-      "wallpaper.png",
+      "./src/imgs/chief3.jpg",
+      "./src/imgs/chiefDoor.jpg",
+      "./src/imgs/chiefStand.jpg",
+      "./src/imgs/helmetGround.jpg",
+      "./src/imgs/wallpaper.png",
     ];
 
     // Pick a random background image different from the previous one

@@ -5,26 +5,26 @@ body {
     height: 100vh;
     margin: 0;
     background-size: cover;
-    background-image: url('wallpaper.png'); /* Set your default image here */
+    background-image: url('./src/imgs/wallpaper.png'); /* Set your default image here */
     animation: moveBackground 120s linear infinite;
     transition: background-image 1s ease-in-out;
 }
 
 @keyframes moveBackground {
     0%  {
-        background-image: url('chief3.jpg');
+        background-image: url('./src/imgs/chief3.jpg');
     }
     25% {
-        background-image: url('chiefDoor.jpg');
+        background-image: url('./src/imgs/chiefDoor.jpg');
     }
     50% {
-        background-image: url('chiefStand.jpg');
+        background-image: url('./src/imgs/chiefStand.jpg');
     }
     75% {
-        background-image: url('helmetGround.jpg');
+        background-image: url('./src/imgs/helmetGround.jpg');
     }
     100%{
-        background-image: url('halo.mp3');
+        background-image: url('./src/imgs/halo.mp3');
     }
 }
 
@@ -48,7 +48,7 @@ button {
 #playButton {
     width: 250px;
     height: 250px;
-    background: url('buttonIMG.jpg') no-repeat center center;
+    background: url('./src/imgs/buttonIMG.jpg') no-repeat center center;
     background-size: contain;
     border: none;
     border-radius: 50%;
@@ -74,7 +74,7 @@ button {
     height: 30px;
     background-color: #003048;
     color: #fff;
-    background: url('energySword.jpeg') no-repeat center center;
+    background: url('./src/imgs/energySword.jpeg') no-repeat center center;
     background-size: cover;
     transform: rotate(180deg); /* Rotate the image 180 degrees */
 }
@@ -85,7 +85,7 @@ button {
     height: 30px;
     background-color: #003048;
     color: #fff;
-    background: url('energySword.jpeg') no-repeat center center;
+    background: url('./src/imgs/energySword.jpeg') no-repeat center center;
     background-size: cover;
 }
 
