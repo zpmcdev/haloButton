@@ -15,30 +15,64 @@ body {
     align-items: center;
 }
 
+/* Common styles for buttons */
 button {
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Play button styles */
+#playButton {
     width: 250px;
     height: 250px;
     background: url('buttonIMG.jpg') no-repeat center center;
     background-size: contain;
     border: none;
-    border-radius: 50%; /* Make the button circular */
+    border-radius: 50%;
     cursor: pointer;
-    background-color: #003048; /* Slightly present dark blue background color */
-    transition: transform 1s ease, background-color 1s ease; /* Add transition for 'transform' and 'background-color' properties */
-    animation: glow 6s infinite alternate, pulse 7s infinite; /* Apply both glow and pulse animations */
+    background-color: #003048;
+    transition: transform 1s ease, background-color 1s ease;
+    animation: glow 6s infinite alternate, pulse 7s infinite;
 }
 
-button:active {
-    transform: scale(0.7); /* Decrease size by 10% on click */
+#playButton:active {
+    transform: scale(0.7);
 }
 
-button.music-playing {
-    background-color: #0057b3; /* Darker blue background color when music is playing */
+#playButton.music-playing {
+    background-color: #009eb3;
+}
+
+/* Previous and Next button styles */
+#previousButton {
+    margin-top: 50px;
+    margin-right: 20px;
+    width: 80px;
+    height: 30px;
+    background-color: #003048;
+    color: #fff;
+}
+#nextButton {
+    margin-top: 50px;
+    margin-left: 20px;
+    width: 80px;
+    height: 30px;
+    background-color: #003048;
+    color: #fff;
+}
+
+#previousButton:hover,
+#nextButton:hover {
+    background-color: #0057b3;
 }
 
 @keyframes glow {
     to {
-        box-shadow: 0 0 50px 20px #0057b3; /* Glowing effect color */
+        box-shadow: 0 0 50px 20px #0057b3;
     }
 }
 
@@ -66,7 +100,6 @@ button.music-playing {
     }
 }
 
-/* Center the volume slider under the button */
 input[type="range"] {
-    margin-top: 50px; /* Adjust the margin as needed */
+    margin-top: 50px;
 }
