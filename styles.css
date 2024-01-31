@@ -55,6 +55,9 @@ button {
     height: 30px;
     background-color: #003048;
     color: #fff;
+    background: url('energySword.jpeg') no-repeat center center;
+    background-size: cover;
+    transform: rotate(180deg); /* Rotate the image 180 degrees */
 }
 #nextButton {
     margin-top: 50px;
@@ -63,6 +66,8 @@ button {
     height: 30px;
     background-color: #003048;
     color: #fff;
+    background: url('energySword.jpeg') no-repeat center center;
+    background-size: cover;
 }
 
 #previousButton:hover,
