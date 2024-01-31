@@ -17,7 +17,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     playButton.addEventListener('click', function () {
         if (audioPlayer.paused || audioPlayer.ended) {
-            playNextSong();
+            if (audioPlayer.currentTime > 0) {
+                audioPlayer.play(); // Continue playing from where it was paused
+            } else {
+                playNextSong();
+            }
             playButton.classList.add('music-playing');
         } else {
             audioPlayer.pause();
