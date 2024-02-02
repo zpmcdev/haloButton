@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
             "./src/imgs/chiefDoor.jpg",
             "./src/imgs/chiefStand.jpg",
             "./src/imgs/helmetGround.jpg",
-            "./src/imgs/wallpaper.png",
+            "./src/imgs/minimalist.png",
             "./src/imgs/battleForAlpha.png",
             "./src/imgs/chiefAndKai.png",
             "./src/imgs/chiefArmor.jpg",
@@ -86,7 +86,16 @@ document.addEventListener("DOMContentLoaded", function () {
             "./src/imgs/chiefUp.jpg",
             "./src/imgs/darkChief.jpeg",
             "./src/imgs/floatyPillar.jpg",
-            "./src/imgs/ringDark.jpg"
+            "./src/imgs/ringDark.jpg",
+            "./src/imgs/halo4.jpg",
+            "./src/imgs/haloLandscape.jpg",
+            "./src/imgs/mayhem.png",
+            "./src/imgs/chiefAndCortana.jpg",
+            "./src/imgs/boysOnHog.jpg",
+            "./src/imgs/chiefBubble.jpg",
+            "./src/imgs/chiefPurp.jpg",
+            "./src/imgs/chiefRun.jpg",
+            "./src/imgs/chiefSand.jpg"
         ];
 
         let randomIndex;
