@@ -4,6 +4,12 @@ document.addEventListener("DOMContentLoaded", function () {
     var volumeSlider = document.getElementById("volumeSlider");
     var previousButton = document.getElementById("previousButton");
     var nextButton = document.getElementById("nextButton");
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    if (isMobile) {
+        // If it's a mobile device, hide the volume slider
+        volumeSlider.style.display = "none";
+    }
     var musicList = [
         "./src/music/Epilogue.mp3",
         "./src/music/ghostsOfReach.mp3",
