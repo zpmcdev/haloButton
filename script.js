@@ -103,22 +103,22 @@ document.addEventListener("DOMContentLoaded", function () {
             "./src/imgs/chiefRun.jpg",
             "./src/imgs/chiefSand.jpg"
         ];
-    
+
         let randomIndex;
         do {
             randomIndex = Math.floor(Math.random() * backgroundImages.length);
         } while (randomIndex === previousImageIndex);
-    
+
         previousImageIndex = randomIndex;
-    
+
         // Create a new Image object to preload the image
         const preloadedImage = new Image();
         preloadedImage.src = backgroundImages[randomIndex];
-    
+
         preloadedImage.onload = () => {
             document.body.style.transition = "background-image 1s ease-in-out";
             document.body.style.backgroundImage = `url('${backgroundImages[randomIndex]}')`;
-    
+
             setTimeout(() => {
                 document.body.style.transition = "";
             }, 1000);
@@ -184,4 +184,7 @@ document.addEventListener("DOMContentLoaded", function () {
     volumeSlider.addEventListener("input", function () {
         audioPlayer.volume = parseFloat(volumeSlider.value);
     });
+
+    // Add a timer to change the background image every 90 seconds
+    setInterval(changeBackgroundImage, 90000); // 90 seconds in milliseconds
 });
