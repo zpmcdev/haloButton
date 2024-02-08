@@ -192,7 +192,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Calculate the time difference between now and March 21st
-    var march21st = new Date("2024-03-21T00:00:00");
+    var march23rd = new Date("2024-03-23T00:00:00");
     var countdownInterval = setInterval(updateTimer, 1000); // Update every second
 
     function formatTime(time) {
@@ -201,8 +201,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function updateTimer() {
         var currentTime = new Date(); // Get the current time based on the user's local time zone
-        var march21st = new Date("2024-03-21T00:00:00");
-        var timeDifference = march21st - currentTime;
+        var march23rd = new Date("2024-03-23T00:00:00");
+        var timeDifference = march23rd - currentTime;
 
         if (timeDifference <= 0) {
             clearInterval(countdownInterval);
