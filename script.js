@@ -4,12 +4,28 @@ document.addEventListener("DOMContentLoaded", function () {
     var volumeSlider = document.getElementById("volumeSlider");
     var previousButton = document.getElementById("previousButton");
     var nextButton = document.getElementById("nextButton");
+    var timerDisplay = document.createElement("div"); // Create a new div for the timer
     var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
     if (isMobile) {
         // If it's a mobile device, hide the volume slider
         volumeSlider.style.display = "none";
     }
+
+    // Set up the timer display
+    timerDisplay.id = "timerDisplay";
+    volumeSlider.parentNode.insertBefore(timerDisplay, volumeSlider.nextSibling); // Insert the timer after the volume slider
+
+    // Apply styling to the timer display
+    timerDisplay.style.marginTop = "10px"; // Adjust margin as needed
+    timerDisplay.style.color = "white"; // Set text color to white
+    timerDisplay.style.fontFamily = "Arial, sans-serif"; // Set font family
+    timerDisplay.style.fontSize = "32px"; // Set font size
+    timerDisplay.style.fontWeight = "bold"; // Set font weight to bold
+    timerDisplay.style.textShadow = "2px 2px 4px rgba(150, 105, 180, 1)"; // Add text shadow for contrast
+    timerDisplay.style.textAlign = "center"; // Center-align the text
+
+        
     var musicList = [
         "./src/music/Epilogue.mp3",
         "./src/music/ghostsOfReach.mp3",
@@ -185,6 +201,33 @@ document.addEventListener("DOMContentLoaded", function () {
         audioPlayer.volume = parseFloat(volumeSlider.value);
     });
 
-    // Add a timer to change the background image every 90 seconds
-    setInterval(changeBackgroundImage, 90000); // 90 seconds in milliseconds
+    // Calculate the time difference between now and March 21st
+    var march21st = new Date("2024-03-21T00:00:00");
+    var countdownInterval = setInterval(updateTimer, 1000); // Update every second
+
+    function formatTime(time) {
+        return time < 10 ? "0" + time : time;
+    }
+
+    function updateTimer() {
+        var currentTime = new Date();
+        var timeDifference = march21st - currentTime;
+
+        if (timeDifference <= 0) {
+            clearInterval(countdownInterval);
+            timerDisplay.textContent = "We Finished The Fight";
+        } else {
+            var days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+            // Format time values with leading zeros
+            const formattedDays = formatTime(days);
+            const formattedHours = formatTime(hours);
+            const formattedMinutes = formatTime(minutes);
+            const formattedSeconds = formatTime(seconds);
+            timerDisplay.textContent = `${formattedDays}:${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
+        }
+    }
 });
