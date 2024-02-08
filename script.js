@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
         preloadedImage.src = backgroundImages[randomIndex];
 
         preloadedImage.onload = () => {
-            document.body.style.transition = "background-image 1s ease-in-out";
+            document.body.style.transition = "background-image 5s ease-in-out";
             document.body.style.backgroundImage = `url('${backgroundImages[randomIndex]}')`;
 
             setTimeout(() => {
