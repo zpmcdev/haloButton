@@ -191,8 +191,6 @@ document.addEventListener("DOMContentLoaded", function () {
         audioPlayer.volume = parseFloat(volumeSlider.value);
     });
 
-    // Calculate the time difference between now and March 21st
-    var march23rd = new Date("2024-03-23T00:00:00");
     var countdownInterval = setInterval(updateTimer, 1000); // Update every second
 
     function formatTime(time) {
