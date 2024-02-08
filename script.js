@@ -221,4 +221,6 @@ document.addEventListener("DOMContentLoaded", function () {
             timerDisplay.textContent = `${formattedDays}:${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
         }
     }
+    // Cycle backgrounds every 90 seconds
+    setInterval(changeBackgroundImage, 90000);
 });
