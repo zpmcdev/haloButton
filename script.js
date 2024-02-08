@@ -15,16 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Set up the timer display
     timerDisplay.id = "timerDisplay";
     volumeSlider.parentNode.insertBefore(timerDisplay, volumeSlider.nextSibling); // Insert the timer after the volume slider
-
-    // Apply styling to the timer display
-    timerDisplay.style.marginTop = "10px"; // Adjust margin as needed
-    timerDisplay.style.color = "white"; // Set text color to white
-    timerDisplay.style.fontFamily = "Arial, sans-serif"; // Set font family
-    timerDisplay.style.fontSize = "32px"; // Set font size
-    timerDisplay.style.fontWeight = "bold"; // Set font weight to bold
-    timerDisplay.style.textShadow = "2px 2px 4px rgba(150, 105, 180, 1)"; // Add text shadow for contrast
-    timerDisplay.style.textAlign = "center"; // Center-align the text
-
         
     var musicList = [
         "./src/music/Epilogue.mp3",

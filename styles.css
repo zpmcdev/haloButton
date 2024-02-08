@@ -109,3 +109,31 @@ button {
 input[type="range"] {
     margin-top: 50px;
 }
+
+/* Timer display styles */
+#timerDisplay {
+    margin-top: 10px; /* Adjust margin as needed */
+    color: white; /* Set text color to white */
+    font-family: Arial, sans-serif; /* Set font family */
+    font-size: 32px; /* Set font size */
+    font-weight: bold; /* Set font weight to bold */
+    text-shadow: 2px 2px 4px rgba(150, 105, 180, 1); /* Add text shadow for contrast */
+    text-align: center; /* Center-align the text */
+    animation: timerPulse 1s infinite; /* Add pulse animation */
+}
+
+#timerDisplay::before {
+    animation: timerPulse 10s infinite;
+}
+
+@keyframes timerPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.01);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
