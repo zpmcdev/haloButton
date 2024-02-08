@@ -200,7 +200,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function updateTimer() {
-        var currentTime = new Date();
+        var currentTime = new Date(); // Get the current time based on the user's local time zone
+        var march21st = new Date("2024-03-21T00:00:00");
         var timeDifference = march21st - currentTime;
 
         if (timeDifference <= 0) {
