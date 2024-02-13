@@ -201,8 +201,17 @@ document.addEventListener("DOMContentLoaded", function () {
         var currentTime = new Date(); // Get the current time based on the user's local time zone
         var march23rd = new Date("2024-03-23T00:00:00");
         var timeDifference = march23rd - currentTime;
-
-        if (timeDifference <= 0) {
+    
+        // Check if it's Valentine's Day
+        var today = new Date();
+        var valentinesDay = new Date(today.getFullYear(), 1, 14); // Month is zero-based, so 1 represents February
+        valentinesDay.setHours(0, 0, 0, 0); // Set time to start of the day
+        var isValentinesDay = today.getDate() === valentinesDay.getDate() &&
+                             today.getMonth() === valentinesDay.getMonth();
+    
+        if (isValentinesDay) {
+            timerDisplay.textContent = "Happy Valentine's Day!";
+        } else if (timeDifference <= 0) {
             clearInterval(countdownInterval);
             timerDisplay.textContent = "We Finished The Fight";
         } else {
@@ -210,7 +219,7 @@ document.addEventListener("DOMContentLoaded", function () {
             var hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             var minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
             var seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-
+    
             // Format time values with leading zeros
             const formattedDays = formatTime(days);
             const formattedHours = formatTime(hours);
@@ -219,6 +228,7 @@ document.addEventListener("DOMContentLoaded", function () {
             timerDisplay.textContent = `${formattedDays}:${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
         }
     }
+    
     // Cycle backgrounds every 90 seconds
     setInterval(changeBackgroundImage, 90000);
 });
