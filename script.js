@@ -199,7 +199,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function updateTimer() {
         var currentTime = new Date(); // Get the current time based on the user's local time zone
-        var march23rd = new Date("2024-03-23T00:00:00");
+        var march23rd = new Date("2024-05-25T00:00:00");
         var timeDifference = march23rd - currentTime;
     
         // Check if it's Valentine's Day
@@ -213,7 +213,7 @@ document.addEventListener("DOMContentLoaded", function () {
             timerDisplay.textContent = "Happy Valentine's Day!";
         } else if (timeDifference <= 0) {
             clearInterval(countdownInterval);
-            timerDisplay.textContent = "We Finished The Fight";
+            timerDisplay.textContent = "We Finished The Fight!";
         } else {
             var days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
             var hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
