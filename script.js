@@ -199,7 +199,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function updateTimer() {
         var currentTime = new Date(); // Get the current time based on the user's local time zone
-        var march23rd = new Date("2024-05-25T00:00:00");
+        var march23rd = new Date("2024-11-02T00:00:00");
         var timeDifference = march23rd - currentTime;
     
         // Check if it's Valentine's Day
